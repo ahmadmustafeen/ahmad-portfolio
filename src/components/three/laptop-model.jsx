@@ -36,3 +36,5 @@ const LaptopModel = () => {
 };
 
 export default LaptopModel;
+
+

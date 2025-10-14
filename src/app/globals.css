@@ -8,6 +8,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: #00EEFF;
+  --color-muted: #A0A0A0;
+  --color-ink: #111111;
+  --color-accent2: #00C8C8;
+  --color-accent3: #00bcd4;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -27,13 +32,13 @@ body {
 .top-bar-contact {
           width: 500px;
           height: 3px;
-          background-color: #00EEFF;
+          background-color: var(--color-primary);
         }
 
         .bottom-piece-contact {
           width: 100px;
           height: 11px;
-          background-color: #00EEFF;
+          background-color: var(--color-primary);
           position: absolute;
           bottom: -8px;
           left: 0;
@@ -48,20 +53,20 @@ body {
           width: 0;
           height: 0;
           border-top: 7px solid transparent;
-          border-left: 7px solid #00EEFF;
+          border-left: 7px solid var(--color-primary);
           transform: rotate(180deg);
         }
 
         .top-bar {
           width: 80px;
           height: 2px;
-          background-color: #00EEFF;
+          background-color: var(--color-primary);
         }
 
         .bottom-piece {
           width: 55px;
           height: 7px;
-          background-color: #00EEFF;
+          background-color: var(--color-primary);
           position: absolute;
           bottom: -6px;
           left: 0;
@@ -76,7 +81,7 @@ body {
           width: 0;
           height: 0;
           border-top: 7px solid transparent;
-          border-left: 7px solid #00EEFF;
+          border-left: 7px solid var(--color-primary);
           transform: rotate(180deg);
         }
 

@@ -2,7 +2,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Canvas } from "@react-three/fiber";
-import LaptopModel from "./Model3d/laptop-model";
+import LaptopModel from "@/components/three/laptop-model";
 
 export default function ProjectCard() {
     return (
@@ -16,7 +16,7 @@ export default function ProjectCard() {
                             <div className="top-bar"></div>
                             <div className="bottom-piece"></div>
                         </div>
-                        <h2 className="text-[#00EEFF] font-semibold text-lg">01</h2>
+                        <h2 className="text-primary font-semibold text-lg">01</h2>
                     </div>
 
                     <h3 className="text-3xl font-bold text-white leading-tight text-start">
@@ -38,7 +38,7 @@ export default function ProjectCard() {
                             clipPath:
                                 "polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0)",
                         }}
-                        className="mt-4 px-6 py-4 text-xl font-light bg-[#00EEFF] hover:bg-cyan-400 text-[#111111] font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group"
+                        className="mt-4 px-6 py-4 text-xl font-light bg-primary hover:bg-cyan-400 text-ink font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group"
                     >
                         View project
                         <ArrowRight
@@ -64,3 +64,5 @@ export default function ProjectCard() {
         </section>
     );
 }
+
+

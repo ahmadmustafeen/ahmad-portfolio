@@ -2,19 +2,13 @@
 
 import { useState, useRef, useEffect } from "react";
 import { initThemeFromStorage, toggleTheme } from "@/app/theme/theme";
-import Logo from "./logo";
-import { GithubIcon, LinkedinIcon, TwitterIcon, SunIcon, MoonIcon } from "./icons";
+import Logo from "@/components/common/Logo";
+import { GithubIcon, LinkedinIcon, TwitterIcon, SunIcon, MoonIcon } from "@/components/common/icons";
 
 function IconButton({ label, onClick, children }) {
     return (
         <button aria-label={label} onClick={onClick} className="relative group h-10 w-10 flex items-center justify-center text-white">
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                style={{
-                    background: "rgba(243, 244, 246, 0.25)",
-                    clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0)",
-                }}
-                aria-hidden="true"
-            />
+            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-200/25 [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_0)]" aria-hidden="true" />
             <span className="relative z-10">{children}</span>
         </button>
     );
@@ -105,6 +99,7 @@ const Navbar = () => {
                         {navLinks.map((link) => (
                             <a key={link.label} href={link.href} onClick={() => setOpen(false)} onMouseEnter={onLinkEnter} onMouseLeave={onLinkLeave} className="group relative inline-block px-2 py-1">
                                 <span className="relative z-10">{link.label}</span>
+                                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-200/25 [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_0)]" aria-hidden="true"></span>
                             </a>
                         ))}
                     </nav>
@@ -149,3 +144,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
-import Navbar from './components/navbar';
-import Hero from './components/hero';
-import ProjectCard from './components/project';
-import Footer from './components/footer';
-import About from './components/about';
+import Navbar from '@/components/sections/navbar';
+import Hero from '@/components/sections/hero';
+import ProjectCard from '@/components/sections/project';
+import Footer from '@/components/common/footer';
+import About from '@/components/sections/about';
 
 
 export default function Home() {

@@ -50,7 +50,7 @@ export default function Hero() {
         <section id="home" className="w-full min-h-[90vh] flex items-center justify-center px-8 pt-24">
             <div className="max-w-5xl w-full flex flex-col items-start relative">
                 <div className="ml-32 w-full">
-                    <h1 className="text-3xl md:text-xl font-extrabold tracking-widest text-[#A0A0A0] mb-6">
+                    <h1 className="text-3xl md:text-xl font-extrabold tracking-widest text-muted mb-6">
                         E B A D &nbsp; U L L A H
                     </h1>
 
@@ -61,7 +61,7 @@ export default function Hero() {
 
 
                     <div className="relative flex items-center gap-2">
-                        <span ref={boxRef} className="absolute z-30 bg-[#00bcd4] rounded-none animate-boxSweep pointer-events-none" style={{ top: "50%", transform: "translateY(calc(-50% - 2px))", left: "0px", width: `${coverW}px`, height: `${coverH}px`, willChange: "clip-path", }} ></span>
+                        <span ref={boxRef} className="absolute z-30 bg-accent3 rounded-none animate-boxSweep pointer-events-none" style={{ top: "50%", transform: "translateY(calc(-50% - 2px))", left: "0px", width: `${coverW}px`, height: `${coverH}px`, willChange: "clip-path", }} ></span>
                         <div className="flex-shrink-0 relative z-10">
                             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-gray-400 opacity-90">
                                 <path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="3.2" strokeLinecap="square" strokeLinejoin="square"
@@ -84,3 +84,5 @@ export default function Hero() {
         </section>
     )
 }
+
+

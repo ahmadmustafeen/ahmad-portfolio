@@ -44,7 +44,7 @@ const About = () => {
                                 <div className="top-bar"></div>
                                 <div className="bottom-piece"></div>
                             </div>
-                            <h2 className="text-[#00EEFF] font-semibold text-lg">About me</h2>
+                            <h2 className="text-primary font-semibold text-lg">About me</h2>
                         </div>
                     </div>
                     <div className="w-full max-w-md h-64 bg-gray-800 flex items-center justify-center">
@@ -59,3 +59,5 @@ const About = () => {
 }
 
 export default About
+
+
