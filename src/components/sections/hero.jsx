@@ -64,6 +64,8 @@ export default function Hero() {
                     <div className="flex items-center w-full mb-6 sm:mb-8 lg:mb-10 gap-3 sm:gap-4">
                         <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[100px] font-semibold text-theme-primary leading-none">
                             Developer</div>
+                                                    <span className="hero-line align-middle" />
+
                     </div>
 
                     <div className="relative flex items-center gap-2">
