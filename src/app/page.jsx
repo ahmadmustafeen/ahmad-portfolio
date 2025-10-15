@@ -14,10 +14,10 @@ export default function Home() {
                 <ProjectCard />
                 <About />
             </main>
-            <div className='mt-20'> 
-                 <Footer />
+            <div className='mt-20'>
+                <Footer />
             </div>
-           
+
         </div>
     );
 }

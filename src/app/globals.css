@@ -103,7 +103,7 @@ body {
 
 .top-bar-contact {
     width: 100%;
-    max-width: 500px;
+    max-width: 570px;
     height: 3px;
     background-color: var(--color-primary);
 }
@@ -183,65 +183,7 @@ body {
     }
 }
 
-@keyframes boxSweep {
-    0% {
-        clip-path: inset(0 100% 0 0);
-        opacity: 1;
-        animation-timing-function: cubic-bezier(0.45, 0, 1, 1);
-    }
 
-    25% {
-        clip-path: inset(0 0 0 0);
-        opacity: 1;
-    }
-
-    25.0001% {
-        clip-path: inset(0 0 0 0);
-        opacity: 1;
-        animation-timing-function: cubic-bezier(0.45, 0, 1, 1);
-    }
-
-    50% {
-        clip-path: inset(0 0 0 100%);
-        opacity: 1;
-    }
-
-    95% {
-        clip-path: inset(0 0 0 100%);
-        opacity: 1;
-    }
-
-    100% {
-        clip-path: inset(0 0 0 100%);
-        opacity: 1;
-    }
-}
-
-@keyframes skillText {
-    0% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    95% {
-        opacity: 0.4;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.animate-boxSweep {
-    animation: boxSweep 5.0s linear infinite;
-}
-
-.animate-skillText {
-    animation: skillText 5.0s linear infinite;
-}
 
 @keyframes scrollWheel {
     0% {
@@ -291,4 +233,60 @@ body {
 .reveal-show {
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+
+@keyframes boxSweep {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    25% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    35% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    35.0001% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    60% {
+        clip-path: inset(0 0 0 100%);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+@keyframes skillFade {
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    36% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.animate-boxSweep {
+    animation: boxSweep 5s linear infinite;
+}
+
+.animate-skillFade {
+    animation: skillFade 5s linear infinite;
 }
