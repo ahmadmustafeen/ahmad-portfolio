@@ -1,57 +1,32 @@
-import { ArrowRight } from "lucide-react";
+'use  client'
 import React from "react";
+import PrimaryButton from "@/components/common/PrimaryButton";
+import InputField from "@/components/common/InputField";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Contact = () => {
+    const headRef = useScrollReveal();
+    const formRef = useScrollReveal();
+
     return (
-        <div className="w-full min-h-[40vh] flex items-center justify-center px-6 py-16">
-            <div className="max-w-4xl w-full flex flex-col items-start text-white">
-                <h2 className="text-3xl font-bold text-white mb-12 text-start ">
+        <div className="w-full min-h-[40vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+            <div className="max-w-4xl w-full flex flex-col items-start text-theme-primary">
+                <h2 ref={headRef} className="text-2xl sm:text-3xl font-bold text-theme-primary mb-8 sm:mb-12 text-left w-full reveal">
                     Say Hello
                 </h2>
-                <div className="relative flex flex-col items-center  mb-14">
+                <div className="relative flex flex-col items-start mb-8 sm:mb-14 w-full">
                     <div className="top-bar-contact"></div>
                     <div className="bottom-piece-contact"></div>
                 </div>
 
-                <form className="space-y-8 w-full">
-                    <div className="relative w-[500px]">
-                        <input type="email" id="email" placeholder="Email" className="peer w-full p-3 bg-transparent text-white border-b border-gray-500 placeholder-transparent focus:outline-none focus:border-primary"
-                        />
-                        <label
-                            htmlFor="email"
-                            className="absolute left-3 top-3 text-gray-400 transition-all duration-300
-              peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-base
-              peer-focus:-top-2 peer-focus:text-sm peer-focus:text-primary"
-                        >
-                            Your Email
-                        </label>
-                    </div>
+                <form ref={formRef} className="space-y-6 sm:space-y-8 w-full flex flex-col items-start reveal">
+                    <InputField id="email" type="email" label="Your Email" placeholder="Email" />
 
-                    <div className="relative w-[500px]">
-                        <input type="email" id="email" placeholder="Email" className="peer w-full p-3 bg-transparent text-white border-b border-gray-500 placeholder-transparent focus:outline-none focus:border-primary" />
-                        <label htmlFor="email"
-                            className="absolute left-3 top-3 text-gray-400 transition-all duration-300
-              peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-base
-              peer-focus:-top-2 peer-focus:text-sm peer-focus:text-primary"
-                        >
-                            Message
-                        </label>
-                    </div>
+                    <InputField id="message" type="textarea" label="Message" placeholder="Message" rows={4} />
 
-
-                    <button
-                        style={{
-                            clipPath:
-                                "polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0)",
-                        }}
-                        className="mt-4 px-6 py-4 text-xl font-light bg-primary hover:bg-cyan-400 text-ink font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group"
-                    >
+                    <PrimaryButton type="submit">
                         Send Message
-                        <ArrowRight
-                            className="transition-transform duration-300 group-hover:translate-x-2"
-                            size={22}
-                        />
-                    </button>
+                    </PrimaryButton>
                 </form>
             </div>
         </div>
@@ -59,5 +34,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-

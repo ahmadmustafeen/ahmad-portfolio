@@ -3,12 +3,12 @@
 import { useState, useRef, useEffect } from "react";
 import { initThemeFromStorage, toggleTheme } from "@/app/theme/theme";
 import Logo from "@/components/common/Logo";
-import { GithubIcon, LinkedinIcon, TwitterIcon, SunIcon, MoonIcon } from "@/components/common/icons";
+import { GithubIcon, LinkedinIcon, TwitterIcon, SunIcon, MoonIcon, MenuIcon, CloseIcon } from "@/components/common/icons";
 
 function IconButton({ label, onClick, children }) {
     return (
-        <button aria-label={label} onClick={onClick} className="relative group h-10 w-10 flex items-center justify-center text-white">
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-200/25 [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_0)]" aria-hidden="true" />
+        <button aria-label={label} onClick={onClick} className="relative group h-12 w-12 sm:h-14 sm:w-14 flex items-center justify-center text-theme-primary cursor-pointer">
+            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover-overlay-fixed [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_0)]" aria-hidden="true" />
             <span className="relative z-10">{children}</span>
         </button>
     );
@@ -72,15 +72,13 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="fixed top-0 left-0 w-full h-16 flex items-center justify-between px-6 z-50">
-                <Logo />
+            <div className="fixed top-4 sm:top-5 left-0 w-full h-16 flex items-center  justify-between px-4 sm:px-6 z-50">
+                <div className="translate-y-[2px]"><Logo /></div>
                 <IconButton
                     label={open ? "Close menu" : "Open menu"}
                     onClick={() => setOpen((v) => !v)}
                 >
-                    <span className="text-2xl leading-none select-none">
-                        {open ? "✕" : "≡"}
-                    </span>
+                    {open ? <CloseIcon /> : <MenuIcon />}
                 </IconButton>
             </div>
 
@@ -95,17 +93,16 @@ const Navbar = () => {
                         open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4",
                     ].join(" ")}
                 >
-                    <nav className="flex flex-col gap-6 text-center text-md text-gray-300">
+                    <nav className="flex flex-col gap-4 sm:gap-6 text-center text-sm sm:text-md text-theme-primary">
                         {navLinks.map((link) => (
                             <a key={link.label} href={link.href} onClick={() => setOpen(false)} onMouseEnter={onLinkEnter} onMouseLeave={onLinkLeave} className="group relative inline-block px-2 py-1">
                                 <span className="relative z-10">{link.label}</span>
-                                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-200/25 [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_8px),calc(100%_-_8px)_100%,0_100%,0_0)]" aria-hidden="true"></span>
                             </a>
                         ))}
                     </nav>
                 </div>
 
-                <div className="absolute bottom-5 left-5 flex gap-4">
+                <div className="absolute bottom-4 sm:bottom-5 left-4 sm:left-5 flex gap-3 sm:gap-4">
                     <a href="https://twitter.com/ebadullah" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="opacity-90 hover:opacity-100 transition-opacity"> <TwitterIcon /> </a>
 
                     <a href="https://github.com/ebadullah" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="opacity-90 hover:opacity-100 transition-opacity"> <GithubIcon /> </a>
@@ -114,7 +111,7 @@ const Navbar = () => {
 
                 </div>
 
-                <div className="absolute bottom-5 right-5">
+                <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5">
                     <IconButton
                         label="Toggle theme"
                         onClick={() => {
@@ -128,7 +125,7 @@ const Navbar = () => {
 
                 {barVisible && (
                     <span
-                        className="pointer-events-none absolute h-[3px] bg-cyan-400 z-[60] transition-transform duration-300 ease-out"
+                        className="pointer-events-none absolute h-[3px] bg-navbar-hover-fixed z-[60] transition-transform duration-300 ease-out"
                         style={{
                             top: barY ? `${barY}px` : "50%", left: `${BAR_SIDE_MARGIN}px`,
                             right: `${BAR_SIDE_MARGIN}px`,
@@ -144,5 +141,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 

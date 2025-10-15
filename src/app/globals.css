@@ -1,133 +1,294 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #F2F2F2;
+    --foreground: #171717;
+    --text-primary: #171717;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    --text-white: #ffffff;
+    --primary: #171717;
+    --primary-hover: #374151;
+    --accent2: #171717;
+    --accent3: #171717;
+    --muted: #A0A0A0;
+    --ink: #ffffff;
+    --logo-bg: #00C8C8;
+    --animation-bg: #00bcd4;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: #00EEFF;
-  --color-muted: #A0A0A0;
-  --color-ink: #111111;
-  --color-accent2: #00C8C8;
-  --color-accent3: #00bcd4;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-muted: var(--muted);
+    --color-ink: var(--ink);
+    --color-accent2: var(--accent2);
+    --color-accent3: var(--accent3);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 html[data-theme="dark"] {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+    --background: #111111;
+    --foreground: #ededed;
+    --text-primary: #ededed;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    --text-white: #ffffff;
+    --primary: #00EEFF;
+    --primary-hover: #00C8C8;
+    --accent2: #00C8C8;
+    --accent3: #00bcd4;
+    --muted: #A0A0A0;
+    --ink: #111111;
+    --logo-bg: #00C8C8;
+    --animation-bg: #00bcd4;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-theme-primary {
+    color: var(--text-primary);
+}
+
+.text-theme-secondary {
+    color: var(--text-secondary);
+}
+
+.text-theme-muted {
+    color: var(--text-muted);
+}
+
+.text-theme-white {
+    color: var(--text-white);
+}
+
+.bg-theme-primary {
+    background-color: var(--primary);
+}
+
+.bg-theme-primary-hover:hover {
+    background-color: var(--primary-hover);
+}
+
+.border-theme-primary {
+    border-color: var(--primary);
+}
+
+.border-theme-muted {
+    border-color: var(--text-muted);
+}
+
+.bg-logo-fixed {
+    background-color: var(--logo-bg);
+}
+
+.bg-animation-fixed {
+    background-color: var(--animation-bg);
+}
+
+.bg-navbar-hover-fixed {
+    background-color: #00EEFF;
+}
+
+.hover-overlay-fixed {
+    background-color: rgba(128, 128, 128, 0.3);
 }
 
 
 .top-bar-contact {
-          width: 500px;
-          height: 3px;
-          background-color: var(--color-primary);
-        }
+    width: 100%;
+    max-width: 500px;
+    height: 3px;
+    background-color: var(--color-primary);
+}
 
-        .bottom-piece-contact {
-          width: 100px;
-          height: 11px;
-          background-color: var(--color-primary);
-          position: absolute;
-          bottom: -8px;
-          left: 0;
-          clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
-        }
+.bottom-piece-contact {
+    width: 100px;
+    height: 11px;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    box-shadow: inset -7px 0 0 0 var(--color-primary);
+}
 
-        .bottom-piece-contact::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-top: 7px solid transparent;
-          border-left: 7px solid var(--color-primary);
-          transform: rotate(180deg);
-        }
+.bottom-piece-contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-left: 7px solid var(--color-primary);
+    transform: rotate(180deg);
+}
 
-        .top-bar {
-          width: 80px;
-          height: 2px;
-          background-color: var(--color-primary);
-        }
+.top-bar {
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
 
-        .bottom-piece {
-          width: 55px;
-          height: 7px;
-          background-color: var(--color-primary);
-          position: absolute;
-          bottom: -6px;
-          left: 0;
-          clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
-        }
+.bottom-piece {
+    width: 55px;
+    height: 7px;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+}
 
-        .bottom-piece::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-top: 7px solid transparent;
-          border-left: 7px solid var(--color-primary);
-          transform: rotate(180deg);
-        }
+.bottom-piece::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-left: 7px solid var(--color-primary);
+    transform: rotate(180deg);
+}
 
 
-        
 
-          @keyframes boxSweep {
-            0% {
-              clip-path: inset(0 100% 0 0);
-              opacity: 1;
-              animation-timing-function: cubic-bezier(0.45, 0, 1, 1); 
-            }
-            25% {
-              clip-path: inset(0 0 0 0);
-              opacity: 1;
-            }
-            25.0001% {
-              clip-path: inset(0 0 0 0);
-              opacity: 1;
-              animation-timing-function: cubic-bezier(0.45, 0, 1, 1); 
-            }
-            50% {
-              clip-path: inset(0 0 0 100%);
-              opacity: 1;
-            }
-            95% {
-              clip-path: inset(0 0 0 100%);
-              opacity: 1;
-            }
-            100% {
-              clip-path: inset(0 0 0 100%);
-              opacity: 1;
-            }
-          }
 
-          @keyframes skillText {
-            0% { opacity: 1; }
-            90% { opacity: 1; }
-            95% { opacity: 0.4; }
-            100% { opacity: 0; }
-          }
+.hero-line {
+    display: inline-block;
+    width: 220px;
+    height: 2px;
+    background-color: var(--text-muted);
+}
 
-          .animate-boxSweep {
-            animation: boxSweep 5.0s linear infinite;
-          }
+@media (min-width: 768px) {
+    .hero-line {
+        width: 300px;
+        height: 2px;
+    }
+}
 
-          .animate-skillText {
-            animation: skillText 5.0s linear infinite;
-          }
+@media (min-width: 1024px) {
+    .hero-line {
+        width: 360px;
+        height: 2px;
+    }
+}
+
+@keyframes boxSweep {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 1;
+        animation-timing-function: cubic-bezier(0.45, 0, 1, 1);
+    }
+
+    25% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    25.0001% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+        animation-timing-function: cubic-bezier(0.45, 0, 1, 1);
+    }
+
+    50% {
+        clip-path: inset(0 0 0 100%);
+        opacity: 1;
+    }
+
+    95% {
+        clip-path: inset(0 0 0 100%);
+        opacity: 1;
+    }
+
+    100% {
+        clip-path: inset(0 0 0 100%);
+        opacity: 1;
+    }
+}
+
+@keyframes skillText {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.animate-boxSweep {
+    animation: boxSweep 5.0s linear infinite;
+}
+
+.animate-skillText {
+    animation: skillText 5.0s linear infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateY(8px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.scroll-indicator {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    z-index: 30;
+    transition: opacity 300ms ease;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-indicator .wheel {
+    animation: scrollWheel 1.6s ease-in-out infinite;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal-show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
