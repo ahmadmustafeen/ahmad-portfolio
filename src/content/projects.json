@@ -1,0 +1,40 @@
+[
+    {
+        "number": "01",
+        "title": "AI Chatbot Template for Educational & Business Websites",
+        "description": "Reusable AI chatbot template with sleek UI, smart prompts, and support features.",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "OpenAI API"
+        ],
+        "link": "#",
+        "screenTextureUrl": "https://www.cronyxdigital.com/hubfs/Blog%20Images/Cronyx%20blog%20post%20images%20-%202.png"
+    },
+    {
+        "number": "02",
+        "title": "SaaS Dashboard Analytics Kit",
+        "description": "Modular SaaS dashboard with charts, role-based access, and audit trails.",
+        "skills": [
+            "Next.js",
+            "Tailwind",
+            "Prisma",
+            "PostgreSQL"
+        ],
+        "link": "#",
+        "screenTextureUrl": "https://picsum.photos/id/1015/1600/900.jpg"
+    },
+    {
+        "number": "03",
+        "title": "E-commerce Storefront + Admin",
+        "description": "Headless storefront with product management, checkout, and order tracking integrated.",
+        "skills": [
+            "Next.js",
+            "Stripe",
+            "MongoDB"
+        ],
+        "link": "#",
+        "screenTextureUrl": "https://picsum.photos/id/1016/1600/900.jpg"
+    }
+]

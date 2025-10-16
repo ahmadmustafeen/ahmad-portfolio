@@ -57,33 +57,30 @@ const Navbar = () => {
     useEffect(() => {
         const stored = initThemeFromStorage();
         setThemeIconAlt(stored === "dark");
+    }, []);
 
+    useEffect(() => {
         if (!open) {
             setBarVisible(false);
             setBarOpen(false);
         }
     }, [open]);
 
-    const navLinks = [
-        { href: "#contact", label: "Projects" },
-        { href: "#contact", label: "Details" },
-        { href: "#contact", label: "Contact" }
-    ];
+    const navLinks = [{ href: "#contact", label: "Projects" }, { href: "#contact", label: "Details" }, { href: "#contact", label: "Contact" }];
 
     return (
         <>
-            <div className="fixed top-4 sm:top-5 left-0 w-full h-16 flex items-center  justify-between px-4 sm:px-6 z-50">
-                <div className="translate-y-[2px]"><Logo /></div>
-                <IconButton
-                    label={open ? "Close menu" : "Open menu"}
-                    onClick={() => setOpen((v) => !v)}
-                >
-                    {open ? <CloseIcon /> : <MenuIcon />}
-                </IconButton>
+            <div className="fixed top-4 sm:top-5 left-0 w-full h-16 flex items-center justify-between px-4 sm:px-6 z-50">
+                <div className="flex items-center">
+                    <Logo />
+                </div>
+                <div className="flex items-center">
+                    <IconButton label={open ? "Close menu" : "Open menu"} onClick={() => setOpen((v) => !v)} > {open ? <CloseIcon /> : <MenuIcon />}</IconButton>
+
+                </div>
             </div>
 
-            <div
-                ref={menuRef}
+            <div ref={menuRef}
                 className={["fixed inset-0 z-40 backdrop-blur-xl bg-black/50", "transform transition-transform duration-500 ease-out", open ? "translate-y-0" : "-translate-y-full",
                 ].join(" ")}
                 aria-hidden={!open}
@@ -112,12 +109,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5">
-                    <IconButton
-                        label="Toggle theme"
-                        onClick={() => {
-                            const next = toggleTheme();
-                            setThemeIconAlt(next === "dark");
-                        }}
+                    <IconButton label="Toggle theme"
+                        onClick={() => { const next = toggleTheme(); setThemeIconAlt(next === "dark"); }}
+
                     >
                         {themeIconAlt ? <MoonIcon /> : <SunIcon />}
                     </IconButton>
@@ -127,8 +121,7 @@ const Navbar = () => {
                     <span
                         className="pointer-events-none absolute h-[3px] bg-navbar-hover-fixed z-[60] transition-transform duration-300 ease-out"
                         style={{
-                            top: barY ? `${barY}px` : "50%", left: `${BAR_SIDE_MARGIN}px`,
-                            right: `${BAR_SIDE_MARGIN}px`,
+                            top: barY ? `${barY}px` : "50%", left: `${BAR_SIDE_MARGIN}px`, right: `${BAR_SIDE_MARGIN}px`,
                             transform: barOpen ? "scaleX(1)" : "scaleX(0)",
                             transformOrigin: barOrigin === "left" ? "left center" : "right center",
                         }}

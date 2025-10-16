@@ -56,22 +56,22 @@ export default function Hero() {
     return (
         <section id="home" className="w-full min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24">
             <div className="max-w-5xl w-full flex flex-col items-start relative">
-                <div className="ml-0 sm:ml-8 lg:ml-32 w-full">
-                    <h1 className="text-3xl md:text-xl font-extrabold tracking-widest  text-theme-muted mb-6">
-                        A h m a d  &nbsp; M u s t a f e e n
-                    </h1>
+                <div className="w-full">
+                    <span className="text-lg  sm:text-xl md:text-2xl lg:text-2xl font-bold tracking-[0.3em] text-theme-muted mb-6 leading-tight">
+                        AHMAD MUSTAFEEN
+                    </span>
+
 
                     <div className="flex items-center w-full mb-6 sm:mb-8 lg:mb-10 gap-3 sm:gap-4">
-                        <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[100px] font-semibold text-theme-primary leading-none">
+                        <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[100px] font-semibold text-theme-primary leading-none mt-2">
                             Developer</div>
-                                                    <span className="hero-line align-middle" />
-
+                        <span className="hero-line align-middle" />
                     </div>
 
-                    <div className="relative flex items-center gap-2">
+                    <div className="relative flex items-center ">
                         <span ref={boxRef}
-                            className="absolute z-30 bg-animation-fixed rounded-none animate-boxSweep pointer-events-none"
-                            style={{ top: "50%", transform: "translateY(calc(-50% - 20px))", left: "0px", width: `${coverW}px`, height: `${coverH}px`, }} ></span>
+                            className="absolute z-30 bg-animation-fixed mt-4 rounded-none animate-boxSweep pointer-events-none"
+                            style={{ top: "50%", transform: "translateY(calc(-50% - 24px))", left: "0px", width: `${coverW}px`, height: `${coverH}px`, }} ></span>
                         <div className="flex-shrink-0 relative z-10" ref={iconBoxRef}>
                             <PlusIcon className="text-gray-500 opacity-90 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" strokeWidth={3.2} /> </div>
 
