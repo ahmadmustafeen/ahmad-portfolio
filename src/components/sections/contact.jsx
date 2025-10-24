@@ -9,7 +9,7 @@ const Contact = () => {
     const formRef = useScrollReveal();
 
     return (
-        <div className="w-full  min-h-[40vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div className="w-full  min-h-[40vh] flex items-center justify-center px-4  sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16   ">
             <div className="max-w-4xl w-full flex flex-col items-start text-theme-primary">
                 <h2 ref={headRef} className="text-2xl sm:text-3xl font-bold text-theme-primary mb-8 sm:mb-12 text-left w-full reveal">
                     Say Hello

@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { initThemeFromStorage, toggleTheme } from "@/app/theme/theme";
 import Logo from "@/components/common/Logo";
 import { GithubIcon, LinkedinIcon, TwitterIcon, SunIcon, MoonIcon, MenuIcon, CloseIcon } from "@/components/common/icons";
+import Link from "next/link";
 
 function IconButton({ label, onClick, children }) {
     return (
@@ -66,7 +67,7 @@ const Navbar = () => {
         }
     }, [open]);
 
-    const navLinks = [{ href: "#contact", label: "Projects" }, { href: "#contact", label: "Details" }, { href: "#contact", label: "Contact" }];
+    const navLinks = [{ href: "/pages/project", label: "Projects" }, { href: "/pages/about", label: "Details" }, { href: "/pages/contact", label: "Contact" }];
 
     return (
         <>
@@ -92,9 +93,9 @@ const Navbar = () => {
                 >
                     <nav className="flex flex-col gap-4 sm:gap-6 text-center text-sm sm:text-md text-theme-primary">
                         {navLinks.map((link) => (
-                            <a key={link.label} href={link.href} onClick={() => setOpen(false)} onMouseEnter={onLinkEnter} onMouseLeave={onLinkLeave} className="group relative inline-block px-2 py-1">
+                            <Link key={link.label} href={link.href} onClick={() => setOpen(false)} onMouseEnter={onLinkEnter} onMouseLeave={onLinkLeave} className="group relative inline-block px-2 py-1">
                                 <span className="relative z-10">{link.label}</span>
-                            </a>
+                            </Link>
                         ))}
                     </nav>
                 </div>
