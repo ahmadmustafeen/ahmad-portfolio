@@ -50,7 +50,7 @@ export default function Hero() {
 
     return (
         <section id="home" className="w-full min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24">
-            <div className="max-w-5xl w-full flex flex-col items-start relative ml-[250px]  mb-[70px]">
+            <div className="max-w-5xl w-full flex flex-col items-start relative lg:ml-[250px]  lg:mb-[70px]">
                 <div className="w-full">
                     <span className="inline-block text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold tracking-[0.3em] text-theme-muted mb-6 leading-tight">
                         <TextScrambleReveal text="AHMAD MUSTAFEEN" />
@@ -73,7 +73,7 @@ export default function Hero() {
                         </div>
 
                         <div className="relative inline-block text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-[90px] font-bold text-theme-primary leading-none overflow-visible">
-                            <span ref={skillRef}  key={skills[index]}  className="relative z-10 pl-2 animate-skillFade">
+                            <span ref={skillRef} key={skills[index]} className="relative z-10 pl-2 animate-skillFade">
                                 {skills[index]}
                             </span>
                         </div>
