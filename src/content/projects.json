@@ -1,0 +1,72 @@
+[
+    {
+        "number": "01",
+        "title": "AI-Powered Chatbot for Website Lead Conversion",
+        "description": "An intelligent chatbot that engages website visitors in real time, answers their queries, and captures potential leads automatically to boost conversions.",
+        "skills": [
+            "Next.js",
+            "OpenAI",
+            "Tailwind",
+            "Express.js",
+            "Chatbot Development"
+        ],
+        "link": "#",
+        "screenTextureUrl": "/project-image.png"
+    },
+    {
+        "number": "02",
+        "title": "Software Engineer & AI Engineer at Habit Driven",
+        "description": "Contributed to Habit Driven AI  a smart habit-tracking app that uses AI insights and personalized recommendations to help users build better habits. Focused on backend and AI integration to improve performance and engagement.",
+        "skills": [
+            "Mobile Application Development",
+            "Prompt Engineering",
+            "TypeScript",
+            "Serverless"
+        ],
+        "link": "#",
+        "screenTextureUrl": "https://media.licdn.com/dms/image/v2/D4E2DAQG95FEc1THB6A/profile-treasury-image-shrink_800_800/B4EZVG8GvWHgAc-/0/1740651918403?e=1761829200&v=beta&t=27mtKGbmChEJ7ioyiq1h4p8ydzSc-ZHzYmVTro678BQ"
+    },
+    {
+        "number": "03",
+        "title": "Anyaa.io  AI-Enhanced E-Commerce Platform",
+        "description": "Anyaa.io is a modern e-commerce platform that enhances the shopping experience with secure authentication, product management, order tracking, and payment integration, ensuring smooth and responsive performance.",
+        "skills": [
+            "Chakra UI",
+            "Agile Methodologies",
+            "MongoDB",
+            "NestJS",
+            "Prisma",
+            "Redux.js"
+        ],
+        "link": "#",
+        "screenTextureUrl": "https://media.licdn.com/dms/image/v2/D4D2DAQHvx2aeR4EQfg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1690540007243?e=1761829200&v=beta&t=CJKdZJ41nZrNhHLrz099ekQAn5yOvJ1VTjOJd5AnwRU"
+    },
+    {
+        "number": "04",
+        "title": "SkilledScore: Your Comprehensive Learning, Certification, and Job Discovery Tool",
+        "description": "SkilledScore is an all-in-one platform that simplifies learning, certification, and job-seeking by providing AI-driven insights and personalized recommendations for skills, certifications, and career opportunities.",
+        "skills": [
+            "Tailwind CSS",
+            "MySQL",
+            "React.js",
+            "Material UI",
+            "Redux.js"
+        ],
+        "link": "#",
+        "screenTextureUrl": "https://media.licdn.com/dms/image/v2/D4E2DAQHNZQohxi8Gag/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1690545434286?e=1761829200&v=beta&t=jewPsze7z8HvFd3ghJ97ou-pJYAD8WaRfnc8szje0ak"
+    },
+    {
+        "number": "05",
+        "title": "QuickWrite  AI powered content generation tool",
+        "description": "QuickWrite is an AI-powered platform that generates engaging blogs and images from trending topics on Twitter and Google, helping creators produce content effortlessly.",
+        "skills": [
+            "Express.js",
+            "TypeScript",
+            "Next.js",
+            "OPENAI",
+            "Redux.js"
+        ],
+        "link": "#",
+        "screenTextureUrl": "https://media.licdn.com/dms/image/v2/D4D2DAQHN79HdLMxhcA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1690540654980?e=1761829200&v=beta&t=O_Wacy0lEXw78DiV5CesACFTFqcGwwyn81Kwu3geql4"
+    }
+]

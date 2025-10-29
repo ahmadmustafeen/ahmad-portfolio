@@ -9,13 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@dilrukr/react-text-scramble": "^1.0.5",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.4.0",
+    "@skits/react-text-scramble": "^1.1.0",
     "lucide-react": "^0.545.0",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-floating-label-input": "^4.3.4",
+    "react-scramble-text": "^1.0.1",
+    "react-slider": "^2.0.4",
     "three": "^0.180.0"
   },
   "devDependencies": {

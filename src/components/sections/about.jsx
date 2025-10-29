@@ -3,7 +3,7 @@ import { SendHorizontal } from "lucide-react";
 import React from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Link from "next/link";
-import { aboutContent } from "@/content/content";
+import aboutContent from "@/content/about.json";
 
 const About = () => {
     const leftRef = useScrollReveal();
@@ -45,18 +45,15 @@ const About = () => {
                         ))}
                     </p>
 
-                    <div className="flex justify-start">
-                        <Link
-                            href="/contact"
-                            className="relative inline-flex items-center gap-2 mt-4 font-bold text-primary py-2 overflow-hidden group"
-                        >
+                    {/* <div className="flex justify-start">
+                        <Link href="/contact" className="relative inline-flex items-center gap-2 mt-4 font-bold text-primary py-2 overflow-hidden group" >
                             <span className="absolute inset-0 bg-primary/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
                             <span className="relative flex items-center gap-2 transition-colors duration-300">
                                 <SendHorizontal className="transition-transform duration-300 group-hover:translate-x-1" />
                                 Send me a message
                             </span>
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div ref={rightRef} className="lg:w-1/2 flex flex-col justify-center reveal">

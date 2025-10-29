@@ -4,6 +4,7 @@ import Hero from '@/components/sections/hero';
 import ProjectCard from '@/components/sections/project';
 import Footer from '@/components/common/footer';
 import About from '@/components/sections/about';
+import Contact from '@/components/sections/contact';
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                 <Hero />
                 <ProjectCard />
                 <About />
+                <Contact/>
             </main>
             <div className='mt-20'>
                 <Footer />
@@ -20,4 +22,4 @@ export default function Home() {
 
         </div>
     );
-}
+}   

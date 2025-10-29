@@ -40,6 +40,10 @@ export function toggleTheme() {
 
 export function initThemeFromStorage() {
     const stored = getStoredTheme();
+    if (stored === null) {
+        setTheme("dark");
+        return "dark";
+    }
     applyTheme(stored);
     return stored;
 }
